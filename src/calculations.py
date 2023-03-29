@@ -1,3 +1,31 @@
+from random import randint, choice
+
+
+def generate_nums() -> tuple[int, int, int, int, int, int]:
+    """Generates a number list.
+
+    Returns
+    -------
+    tuple[int, int, int, int, int, int]
+        The number list
+    """
+
+    # Create a empty number list
+    nums = list()
+
+    # Generate 5 single digit number
+    while len(nums) != 5:
+        generated = randint(0, 9)
+
+        if not generated in nums:
+            nums.append(generated)
+    
+    # Generate a two digit number and add it to the list
+    nums.append(choice([10, 20, 30, 40, 50, 60, 70, 80, 90]))
+    
+    return tuple(nums)
+
+
 def calculate_base_point(target: int, calculated: int) -> int:
     """Calculates the base point.
 
