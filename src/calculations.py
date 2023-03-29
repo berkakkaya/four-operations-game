@@ -80,7 +80,7 @@ def calculate_base_point(target: int, calculated: int) -> int:
     # Do a int conversion, in case of the calculated number's type is float
     calculated = int(calculated)
 
-    return max(0, target - calculated)
+    return max(0, 10 - abs(target - calculated))
 
 
 def calculate_multiplier(step_target: int, step_calculated: int) -> int:
