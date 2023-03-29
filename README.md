@@ -37,6 +37,7 @@ Oyun puanının hesaplanmasının belirli bir algoritması vardır.
 
 Yazılım, ilk olarak temel puanı hesaplar. Temel puan $p_b$, hedef sayı $n_t$
 ve hesaplanan sayı $n_c$ olmak üzere şu şekilde hesaplanır:
+
 $$
 p_b = \max(0, n_t - n_c)
 $$
@@ -53,6 +54,7 @@ $$
 
 Son olarak, final puanı ($p_f$) bulmak için temel puan $p_b$ ve puan çarpanı
 $k$ olmak üzere aşağıdaki formül uygulanır:
+
 $$
 p_f = p_b + 2 \cdot k
 $$
