@@ -39,7 +39,11 @@ Yazılım, ilk olarak temel puanı hesaplar. Temel puan $p_b$, hedef sayı $n_t$
 ve hesaplanan sayı $n_c$ olmak üzere şu şekilde hesaplanır:
 
 $$
-p_b = \max(0, n_t - n_c)
+p_b =
+\begin{dcases}
+0 && \text{if} && |n_t - n_c| > 9 \\
+10 - |n_t - n_c| && \text{if} && |n_t - n_c| \leq 9
+\end{dcases}
 $$
 
 Yazılım, bir puan çarpanı hesaplar. Puan çarpanı, kullanıcının sayıya daha
