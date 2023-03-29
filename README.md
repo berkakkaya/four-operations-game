@@ -13,13 +13,12 @@ Yazılım, işlem yapılacak olan sayıları rastgele olarak oluşturmaktadır.
 Yazılım, ilk olarak beşi tek haneli sayı, bir tanesi iki haneli ve onun
 katı olan sayı olmak üzere rastgele sayılar oluşturur. Daha sonrasında
 yazılım, oyuncunun hedefleyeceği üç haneli sayıyı bulmaya çalışır.
-Bunun için, maksimum dört kereye mahsus olmak üzere, rastgele üretilen bu
-sayıları rastgele işlemlere tabii tutar. Bu sayıyı üretmek için yazılım,
-önceki işlemlerin sonuçlarını da yeni işlemlerde kullanabilir.
-En sonunda yazılım, oluşturduğu sayılarla birlikte bu sayıyı kaç aşamada
-oluşturduğunun bilgisini tutar.
+Bunun için yazılım, öncelikle seçilen sayılardan en büyük dördünü alır.
+Ardından bu dördünü çarparak seçilebilecek maksimum limiti belirler.
+Daha sonrasında bu limite göre yazılım üç basamaklı rastgele bir
+sayı oluşturur.
 
-### Sayıyı Dört İşlemle Oluşturma
+### Oyun Akışı
 Oyun, her turun başında yazılım, terminale kullanıcının kullanabileceği
 sayıları, kaçıncı turda olduğu bilgisini ve son işlemin sonucunu yazdırır.
 Daha sonrasında yazılım, kullanıcıdan verilen liste içerisinden iki sayı
