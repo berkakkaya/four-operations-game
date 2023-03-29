@@ -26,6 +26,38 @@ def generate_nums() -> tuple[int, int, int, int, int, int]:
     return tuple(nums)
 
 
+def generate_target_number(nums: tuple) -> int:
+    """Generate a target number, based on the number list
+
+    Parameters
+    ----------
+    nums : tuple
+        The number list
+
+    Returns
+    -------
+    int
+        The target number
+    """
+
+    # Sort the list in descending order
+    nums = sorted(nums, reverse=True)
+    max_limit = 1
+    
+    # Pick the biggest 4 numbers and multiply them to get the max limit
+    for num in nums[:4]:
+        max_limit = max_limit * num
+    
+    # Regularize the max limit if it's out of range
+    if max_limit < 100:
+        max_limit = max_limit * 2
+    
+    if max_limit >= 1000:
+        max_limit = 999
+    
+    return randint(100, max_limit)
+
+
 def calculate_base_point(target: int, calculated: int) -> int:
     """Calculates the base point.
 
